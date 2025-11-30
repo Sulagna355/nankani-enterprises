@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nankani Enterprises Pvt Ltd — Global Food Trading</title>
+  <meta name="description" content="Reliable B2B sourcing of grains, pulses, spices & edible oils worldwide."/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          : {
+          colors: {
+            navy: '#0B1B2B',
+            'sea-green': '#007C6B',
+            saffron: '#D4A538',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['"Source Serif Pro"', ']
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://rsms.me/inter/inter.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .font-serif { font-family: 'Source Serif Pro', serif; }
+  </style>
+</head>
+<body class="bg-white dark:bg-navy text-navy dark:text-white min-h-screen">
+
+  <!-- Header -->
+  <header class="bg-navy text-white py-4 shadow-lg">
+    <div class="container mx-auto px-6 flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Nankani Enterprises</h1>
+      <button id="darkToggle" class="px-4 py-2 bg-saffron text-navy rounded">Light Mode</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main> -->
+  <section class="bg-sea-green text-white py-24">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-5xl md:text-6xl font-serif font-bold mb-6">
+        Reliable Global Sourcing<br>for Food Businesses
+      </h1>
+      <p class="text-xl mb-10 max-w-3xl mx-auto">
+        We connect producers and buyers with traceable supply chains, rigorous QA, and timely logistics.
+      </p>
+      <div class="space-x-4">
+        <a href="#rfq" class="bg-saffron text-navy px-8 py-4 rounded-lg text-lg font-bold hover:bg-white transition">Request a Quote</a>
+        <a href="#products" class="border-2 border-white px-8 py-4 rounded-lg text-lg hover:bg-white hover:text-navy transition">View Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Products -->
+  <section id="products" class="py-20 bg-gray-50 dark:bg-gray-900">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-12">Our Core Products</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-navy p-8 rounded-xl shadow-lg text-center">
+          <h3 class="text-2xl font-bold mb-3">Red Lentils</h3>
+          <p>Canada • MOQ 1MT • Halal • Organic options</p>
+        </div>
+        <div class="bg-white dark:bg-navy p-8 rounded-xl shadow-lg text-center">
+          <h3 class="text-2xl font-bold mb-3">Basmati Rice</h3>
+          <p>India • MOQ 500kg • Aged • EU compliant</p>
+        </div>
+        <div class="bg-white dark:bg-navy p-8 rounded-xl shadow-lg text-center">
+          <h3 class="text-2xl font-bold mb-3">Palm Oil RBD</h3>
+          <p>Malaysia • MOQ 20MT • RSPO options</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RFQ Form -->
+  <section id="rfq" class="py-20 bg-white dark:bg-navy">
+    <div class="container mx-auto px-6 max-w-2xl">
+      <h2 class="text-4xl font-bold text-center mb-12">Request a Quote</h2>
+      <form class="space-y-6" onsubmit="alert('Thank you! We will contact you within 24 hours.');return false">
+        <input type="text" placeholder="Company Name *" required class="w-full p-4 border rounded-lg dark:bg-gray-800"/>
+        <input type="email" placeholder="Email *" required class="w-full p-4 border rounded-lg dark:bg-gray-800"/>
+        <input type="tel" placeholder="Phone" class="w-full p-4 border rounded-lg dark:bg-gray-800"/>
+        <textarea placeholder="Products, quantity, destination, Incoterms..." rows="5" class="w-full p-4 border rounded-lg dark:bg-gray-800"></textarea>
+        <button type="submit" class="w-full bg-saffron text-navy py-4 rounded-lg font-bold text-xl hover:bg-sea-green transition">
+          Submit Request
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-navy text-white py-8">
+    <div class="container mx-auto px-6 text-center">
+      <p>© 2025 Nankani Enterprises Pvt Ltd — Sourcing the world's ingredients with integrity and scale.</p>
+    </div>
+  </footer>
+
+  <!-- Dark Mode Toggle Script -->
+  <script>
+    const toggle = document.getElementById('darkToggle');
+    toggle.addEventListener('click', () => document.documentElement.classList.toggle('dark'));
+    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      document.documentElement.classList.add('dark');
+      toggle.textContent = 'Light Mode';
+    } else {
+      toggle.textContent = 'Dark Mode';
+    }
+  </script>
+</body>
+</html>
